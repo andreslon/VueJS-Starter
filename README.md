@@ -1,26 +1,26 @@
 # vuejs-starter.ui
 
-## Configuración del proyecto
+## Project setup
 ```
 npm install
 ```
 
-###  Compilar y recargar en tiempo real todo desarrollo
+### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compilar y minificar para producción
+### Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Ejecutar pruebas
+### Run your tests
 ```
 npm run test
 ```
 
-### Lints/Corregir archivos
+### Lints and fixes files
 ```
 npm run lint
 ```
