@@ -1,8 +1,26 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <img src="./../assets/logo.png">
-    <h2>{{ env }}</h2>
+    <div>
+      <b>Environment:</b>
+      <span>{{ env }}</span>
+    </div>
+    <div>
+      <b>Language:</b>
+      <span>{{ $t("language") }}</span>
+    </div>
+    <div>
+      <span>{{ $t("message.description") }}</span>
+    </div>
+
+    <div>
+      <md-button
+        v-for="lang in languages"
+        :key="lang"
+        class="md-raised"
+        @click="changeLang(lang)"
+      >{{lang}}</md-button>
+    </div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
       quibusdam, non molestias et! Earum magnam, similique, quo recusandae
@@ -492,8 +510,14 @@ export default {
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
-      env: process.env.NODE_ENV
+      env: process.env.NODE_ENV,
+      languages: ["en", "es"]
     };
+  },
+  methods: {
+    changeLang(lang) {
+      this.$i18n.locale = lang;
+    }
   }
 };
 </script>
