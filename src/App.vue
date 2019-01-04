@@ -33,24 +33,18 @@
       </md-app-drawer>
 
       <md-app-content>
-       <HelloWorld/>
+       <Detail/> 
       </md-app-content>
-    </md-app> 
-
-  <!-- <div id="app">
-    <img src="./assets/logo.png">
-     {{ env }}
-    <HelloWorld/>
-  </div> -->
+    </md-app>  
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld'
+<script> 
+import Detail from './components/Detail'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Detail
   },
   data () {
      return {
