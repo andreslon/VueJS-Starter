@@ -9,27 +9,27 @@
           Navigation
         </md-toolbar>
 
-        <md-list>
-          <md-list-item>
-            <md-icon>move_to_inbox</md-icon>
-            <span class="md-list-item-text">Inbox</span>
-          </md-list-item>
+         <md-list>
+        <md-list-item md-expand md-expanded="true">
+          <md-icon>whatshot</md-icon>
+          <span class="md-list-item-text">News</span>
 
-          <md-list-item>
-            <md-icon>send</md-icon>
-            <span class="md-list-item-text">Sent Mail</span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon>delete</md-icon>
-            <span class="md-list-item-text">Trash</span>
-          </md-list-item>
-
-          <md-list-item>
-            <md-icon>error</md-icon>
-            <span class="md-list-item-text">Spam</span>
-          </md-list-item>
-        </md-list>
+          <md-list slot="md-expand">
+            <md-list-item class="md-inset">World</md-list-item>
+            <md-list-item class="md-inset">Europe</md-list-item>
+            <md-list-item class="md-inset">South America</md-list-item>
+          </md-list>
+        </md-list-item>
+        <md-list-item md-expand md-expanded="true">
+          <md-icon>videogame_asset</md-icon>
+          <span class="md-list-item-text">Games</span>
+          <md-list slot="md-expand">
+            <md-list-item class="md-inset">Console</md-list-item>
+            <md-list-item class="md-inset">PC</md-list-item>
+            <md-list-item class="md-inset">Phone</md-list-item>
+          </md-list>
+        </md-list-item>
+      </md-list>
       </md-app-drawer>
 
       <md-app-content>
@@ -71,5 +71,14 @@ export default {
 .md-drawer {
   width: 230px;
   max-width: calc(100vw - 125px);
+}
+
+$list-width: 320px; 
+ 
+
+.control {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column; 
 }
 </style>
