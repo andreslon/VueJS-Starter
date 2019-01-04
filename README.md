@@ -1,4 +1,4 @@
-# reports-portal.ui
+# vuejs-starter
 
 > A Vue.js project
 
